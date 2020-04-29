@@ -1,8 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	fmt.Println("aaaaaaaaa")
-	fmt.Println("你好呀")
+	var s, sep string
+	for i := 1; i < len(os.Args); i++ {
+		s = sep + os.Args[i]
+		sep += "aaaaa"
+		fmt.Println(s)
+	}
+	fmt.Println(sep)
 }
